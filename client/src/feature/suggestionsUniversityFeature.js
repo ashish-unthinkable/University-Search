@@ -9,6 +9,8 @@ const initialState = {
 
 
 //create async thunk gives the async function access of the dispatch , async funtion ko dispatch ka access de deta h
+// type of the action -> university/fetchUniversity
+// createAsyncThunk returns thunk function that when dispatched will dispatch multiple actions (pending, fulfilled, rejected)
 export const fetchUniversity = createAsyncThunk('university/fetchUniversity',async(searchValue) =>{
     try{
         const response = await GET(universityUrl + `${searchValue}`);
@@ -46,7 +48,7 @@ const suggestionsUniversitySlice = createSlice({
 
 export const {updateStatus, updateUniversity} = suggestionsUniversitySlice.actions;
 
-export const getUniversitySuggestions = (state) => state.universitySuggestions.university;
-export const getUniversityAPIStatus = (state) => state.universitySuggestions.status;
+export const getUniversitySuggestions = state => state.universitySuggestions.university;
+export const getUniversityAPIStatus = state => state.universitySuggestions.status;
 
 export default suggestionsUniversitySlice.reducer;  

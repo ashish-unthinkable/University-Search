@@ -240,9 +240,15 @@
       ]
     },
     {
-      "id": "ashish",
-      "email": "ashish@gmail.com",
-      "password": "@",
+      "id": "a",
+      "email": "a",
+      "password": "a",
+      "university": []
+    },
+    {
+      "id": "a",
+      "email": "a",
+      "password": "1",
       "university": []
     }
   ]

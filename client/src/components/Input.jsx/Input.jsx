@@ -1,9 +1,7 @@
-import React, {useMemo}from "react";
-import { useSelector } from "react-redux";
+import React from "react";
 import PropTypes from "prop-types";
 
 import "./input.css";
-// import InputError from "../ErrorComponent/InputError";
 
 const Input = ({
   label,
@@ -34,7 +32,6 @@ Input.propTypes = {
   required: PropTypes.bool.isRequired,
   onChange: PropTypes.func,
   warning: PropTypes.bool,
-  warningText: PropTypes.string,
 };
 
 Input.defaultProps = {

@@ -93,6 +93,7 @@ import { useSelector } from "react-redux";
 
 import { GET } from "../../API";
 import { universityUrl, countryUrl } from "../../Constant";
+import { getUser } from "../../feature/userFeature";
 import UniversityCard from "../UniversityCard/UniversityCard";
 import UniversityDetail from "../UniversityDetail/UniversityDetail";
 import "./profile.css";
@@ -100,10 +101,11 @@ import "./profile.css";
 
 const Profile = () => {
   // const { user } = useAuth();
-  const user = useSelector(state => state.user);
+  const user = useSelector(getUser);
   const [bookmarkedUniversity, setBookmarkedUniversity] = useState([]); // user university
   const [selectedUniversity, setSelectedUniversity] = useState(); // university in focus
   const [country, setCountry] = useState(); // university in focus' country
+  
   useEffect(() => {
     (()=>{
       try {

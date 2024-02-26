@@ -56,11 +56,11 @@
 
 // export default Header;
 
-import React, { useCallback, useContext } from "react";
+import React, { useCallback } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import {useSelector, useDispatch} from 'react-redux';
 
-import { updateUser } from "../../feature/userFeature";
+import { getUser, updateUser } from "../../feature/userFeature";
 import logo from "../../assets/logo.png";
 import "./header.css";
 // import { useAuth } from "../../AuthProvider";
@@ -68,7 +68,7 @@ import "./header.css";
 const Header = () =>  {
 
   // const { user, updateUser } = useAuth();
-  const user = useSelector(state => state.user);
+  const user = useSelector(getUser);
   const dispatch = useDispatch();
   
   const navigate = useNavigate();
@@ -84,7 +84,7 @@ const Header = () =>  {
     } catch (error) {
       console.error("Error during logout:", error.message);
     }
-  }, []);
+  }, [updateUser]);
 
   return (
     <nav>

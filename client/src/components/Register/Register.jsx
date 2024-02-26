@@ -16,8 +16,6 @@ function Register() {
   const dispatch = useDispatch();
 
   const [credentials, setCredentials] = useState({});
-  // const [warning, setWarning] = useState(false);
-  // const [warningText, setWarningText] = useState("");
   const [initialWarning, setInitialWarning] = useState(false);
   const [warning, setWarning] = useState({isWarning: false, warningText:""});
   const navigate = useNavigate();
@@ -47,15 +45,13 @@ function Register() {
     try {
       const {name, email, password} = credentials;
       if (!email || !password) {
-        // setWarning(true);
-        // setWarningText("Any of the email or password cannot be left empty");
         setInitialWarning(true);
         setWarning({isWarning: false, warningText:""});
         return;
       }
 
       // Check if user already exists
-      const response = await GET(serverUrl + `?email=${email}&password=${password}`);
+      const response = await GET(serverUrl + `?email=${email}`);
       const user = response?.data?.[0];
       if(user){
         // setWarning(true);
@@ -74,14 +70,12 @@ function Register() {
       };
 
       await POST(serverUrl, formData);
-      // localStorage.setItem("user", JSON.stringify(formData));
-      // updateUser(formData)
       dispatch(updateUser(formData));
       navigate("/");
     } catch (error) {
       console.error("Error during registration:", error.message);
     }
-  }, [credentials]);
+  }, [credentials, updateUser]);
 
   const goToLogin = useCallback(() => navigate("/login"), []);
 

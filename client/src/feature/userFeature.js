@@ -19,6 +19,8 @@ export const userSlice = createSlice({
 
 export const {updateUser} = userSlice.actions;
 
+export const getUser = state => state.user;
+
 export default userSlice.reducer;
 
 // The updateUser is a reducer that has state and 'user/updateUser' as action i.e. "name/reducer"

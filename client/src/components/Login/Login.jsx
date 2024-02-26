@@ -14,6 +14,8 @@ function Login() {
   // const { updateUser } = useAuth();
   const dispatch = useDispatch();
   const [credentials, setCredentials] = useState({});
+
+  // initial warning -> warning on input when the page mounts
   const [initialWarning, setInitialWarning] = useState(false);
   const [warning, setWarning] = useState({isWarning: false, warningText:""});
   const navigate = useNavigate();
@@ -44,8 +46,8 @@ function Login() {
       } 
       const response = await GET(serverUrl + `?email=${email}&password=${password}`);
       const userData = response?.data?.[0];
-      if (!userData || userData.password !== password) {
-        setWarning({isWarning: true, warningText:"User doesnot exist!"})
+      if (!userData) {
+        setWarning({isWarning: true, warningText:"Wrong Password or User not registered!"})
         return;
       }
       dispatch(updateUser(userData))
@@ -53,7 +55,7 @@ function Login() {
     } catch (error) {
       console.error(error.message);
     }
-  }, [credentials]);
+  }, [updateUser, credentials]);
 
   const goToRegister = useCallback(() => navigate("/register"), []);
 

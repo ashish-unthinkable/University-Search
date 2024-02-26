@@ -2,14 +2,14 @@ import React, { useState, useCallback, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
 import { GET } from "../../API";
-import { universityUrl, countryUrl } from "../../Constant";
+import { countryUrl } from "../../Constant";
 import Input from "../Input.jsx/Input";
 import UniversityCard from "../UniversityCard/UniversityCard";
 import UniversityDetail from "../UniversityDetail/UniversityDetail";
 import {
   updateStatus,
-  getUniversitySuggestions,
   getUniversityAPIStatus,
+  getUniversitySuggestions,
   fetchUniversity,
 } from "../../feature/suggestionsUniversityFeature";
 import "./search.css";
@@ -29,46 +29,49 @@ function Search() {
   const [country, setCountry] = useState(); // university's country
   const [inputValue, setInputValue] = useState("");
 
-  useEffect(()=>{
-    if(universityAPIStatus === 'fulfilled'){
+  useEffect(() => {
+    if (universityAPIStatus === "fulfilled") {
       setSuggestions(universitySuggestions);
-    }
-    else if(universityAPIStatus === 'idle')
-    {
-      setSuggestions([]); 
-    }
-
-  }, [universityAPIStatus, suggestionsArray])
-
-  const handleOnChange = useCallback((event)=>{
-    const input = event.target.value;
-    setInputValue(input);
-    if(input.length){
-      dispatch(fetchUniversity(input));
-    }
-    else
-    {
+    } else if (universityAPIStatus === "idle") {
       setSuggestions([]);
     }
-  },[dispatch, fetchUniversity]);
+  }, [universityAPIStatus]);
 
-  const handleSearch = useCallback(() =>{
+  const handleOnChange = useCallback(
+    (event) => {
+      const input = event.target.value;
+      setInputValue(input);
+      if (input.length) {
+        dispatch(fetchUniversity(input));
+      } else {
+        setSuggestions([]);
+      }
+    },
+    [fetchUniversity]
+  );
+
+  const handleSearch = useCallback(() => {
     const input = inputValue;
-    if(input.length){
+    if (input.length) {
       setSuggestionsArray(universitySuggestions);
-      dispatch(updateStatus('idle'));
+      dispatch(updateStatus("idle"));
     }
-  },[universitySuggestions, inputValue, dispatch]);
+  }, [universitySuggestions, inputValue]);
 
-  // If user clicks on suggestion 
-  const handleSuggestionSearch = useCallback((inputUniversity)=> () =>{
-    setInputValue(inputUniversity.name);
-    setSuggestionsArray([inputUniversity]); // wrap object into array
-    dispatch(updateStatus('idle'));
-  },[dispatch, updateStatus]);
+  // If user clicks on suggestion
+  const handleSuggestionSearch = useCallback(
+    (inputUniversity) => () => {
+      setInputValue(inputUniversity.name);
+      setSuggestionsArray([inputUniversity]); // wrap object into array
+      dispatch(updateStatus("idle"));
+    },
+    [updateStatus]
+  );
 
-  const optimisedHandleOnChange = useCallback(debounce(handleOnChange, 800), [handleOnChange]);
-  
+  const optimisedHandleOnChange = useCallback(debounce(handleOnChange, 800), [
+    handleOnChange,
+  ]);
+
   const fetchCountry = useCallback(
     (university) => async () => {
       const countryResponse = await GET(countryUrl + `/${university.country}`);
@@ -91,7 +94,7 @@ function Search() {
             placeholder="Enter University"
             required={false}
             onChange={optimisedHandleOnChange}
-          />  
+          />
           <span className="search-icon" onClick={handleSearch}>
             &#128269;
           </span>

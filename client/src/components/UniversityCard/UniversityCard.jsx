@@ -7,7 +7,7 @@ import { CiBookmark } from "react-icons/ci";
 import { FaExternalLinkSquareAlt, FaBookmark } from "react-icons/fa";
 import "./UniversityCard.css";
 // import { useAuth } from "../../AuthProvider";
-import {updateUser} from '../../feature/userFeature'
+import {getUser, updateUser} from '../../feature/userFeature'
 
 const UniversityCard = ({
   university,
@@ -16,7 +16,7 @@ const UniversityCard = ({
   showIcons,
 }) => {
   // const {user, updateUser} = useAuth();
-  const user = useSelector(state => state.user);
+  const user = useSelector(getUser);
   const dispatch = useDispatch();
 
   const handleBookmark = useCallback(
@@ -49,13 +49,12 @@ const UniversityCard = ({
         });
         const updatedUser = {...user};
         updatedUser.university = updatedUniversityList;
-        // console.log("Updated User", updatedUser)
         dispatch(updateUser(updatedUser))
       } catch (error) {
         console.error(error.messgae);
       }
     },
-    [user, dispatch]
+    [user, updateUser]
   );
 
   return (
