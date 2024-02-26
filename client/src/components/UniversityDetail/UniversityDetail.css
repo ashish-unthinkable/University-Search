@@ -1,0 +1,60 @@
+.universityDetails{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    height: 430px;
+    background-color: white;
+    box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.1);
+    padding: 10px 10px;
+    margin-top: 15px;
+}
+
+.universityTitle{
+    font-size: 21px;
+    font-weight: 700;
+}
+
+.para{
+    font-size: 13px;
+    line-height: 20px;
+}
+
+.country, .website, .capital, .currency, .language, .population{
+    font-size: 17px;
+    font-weight: 500;
+}
+
+span{
+    font-weight: 400;
+    font-size: 15px;
+}
+
+.website a{
+    text-decoration: none;
+    color: black;
+    padding: 0px 5px;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+@media (max-width:614px) {  
+    .universityTitle{
+        font-size: 17px;
+    }
+    
+    .para{
+        font-size: 11px;
+    }
+    
+    .country, .website, .capital, .currency, .language, .population{
+        font-size: 14px;
+    }
+    
+    span{
+        font-size: 12px;
+    }
+    
+    .website a{
+        font-size: 12px;
+    }
+}

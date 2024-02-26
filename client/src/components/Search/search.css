@@ -1,0 +1,166 @@
+.searchBox{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.searchBar{
+    width: 600px;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.searchBar input{
+    height: 50px;
+    width: 500px;
+    font-size: 20px;
+    background: white !important;
+    font-size: 20px;
+}
+
+.search-icon{
+    font-size: 20px;
+    padding:15px;
+    background-color: blue;
+    margin: 0px 10px;
+    border-radius: 7px;
+    box-sizing: border-box;
+}
+
+.search-icon:hover{
+    cursor: pointer;
+}
+
+.suggestions{
+    display: block;
+    width: 500px;
+    max-height: 200px;
+    border: none;
+    margin-top: 10px;
+    margin-right: 80px;
+    padding: 0px 10px;
+    position: absolute;
+    top: 100px;
+    background-color: white;
+    box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 7px;
+    overflow-y: auto;
+}
+
+.suggestions div{
+    font-size: 15px;
+    min-height: 20px;
+    max-width: 495px;
+}
+
+.suggestions div:hover{
+    cursor: pointer;
+}
+
+.suggestions div span{
+    font-size: 14px;
+    padding-left: 5px;
+}
+
+.suggestionsArray{
+    display: block;
+    margin-top: 10px;
+    width: 600px;
+}
+
+.universityData{
+    width: 600px;
+    align-items: center;
+}
+
+@media (max-width:848px) and (min-width:614px) {
+
+.searchBar{
+    width: 500px;
+}
+.searchBar input{
+    height: 35px;
+    width: 400px;
+    font-size: 15px;
+    height: 30px;
+}
+
+.search-icon{
+    font-size: 20px;
+    height: 37px;
+    padding: 7px;
+}
+
+.suggestions{
+    width: 423px;
+    margin-left: 24px;
+    box-sizing: border-box;
+}
+
+.suggestions div{
+    width: 400px;
+    padding: 5px 0px;
+    height: 45px;
+}
+
+.suggestions div span{
+    font-size: 11px;
+}
+.suggestionsArray{
+    max-width: 500px;
+    align-self: center;
+}
+
+.universityData{
+    width: 500px;
+}
+
+    
+}
+
+@media (max-width:614px){
+    .searchBar{
+        width: 270px;
+    }
+    .searchBar input{
+        height: 35px;
+        width: 200px;
+        font-size: 13px;
+        height: 25px;
+    }
+
+    .search-icon{
+        font-size: 15px;
+        height: 33px;
+        padding: 7px;
+    }
+
+    .suggestions div span{
+        font-size: 9px;
+    }
+    .suggestions{
+        margin-left: 70px;
+        width: 270px;
+        box-sizing: border-box;
+        
+    }
+    
+    .suggestions div{
+        width: 260px;
+        padding: 5px 0px;
+        height: 45px;
+    }
+
+    .suggestionsArray{
+        max-width: 270px;
+        align-self: center;
+    }
+
+    .universityData{
+        width: 270px;
+    }
+    
+
+}

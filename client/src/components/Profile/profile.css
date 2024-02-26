@@ -1,0 +1,71 @@
+.profileContainer{
+    display: flex;
+    margin: 50px;
+    justify-content: space-between;
+}
+
+.favorites{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.title{ 
+    font-weight: bold;   
+    font-size: 22px;
+    color: blue;
+}
+
+.selectedUniversity{
+    width: 50%;
+    height: 100%;
+}
+
+@media (max-width:1219px){
+    .profileContainer{
+        margin: 15px;
+        flex-direction: column;
+        align-items: center;
+        gap:20px;
+    }
+    
+}
+
+@media (max-width:848px){
+    .title{   
+        margin: 10px;
+        font-size: 20px;
+    }
+
+}
+
+@media (max-width:1219px) and (min-width:848px){
+    .favorites{
+        width: 580px;
+    }
+    .selectedUniversity{
+        width: 580px;
+    }
+    
+}
+
+
+@media (max-width:848px) and (min-width:614px) {  
+    .favorites{
+        width: 480px;
+    }
+    .selectedUniversity{
+        width: 480px;
+    }
+}
+
+@media (max-width:614px){
+    .favorites{
+        width: 260px;
+    }
+    .selectedUniversity{
+        width: 310px;
+    }
+
+}
+

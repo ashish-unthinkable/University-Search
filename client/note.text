@@ -1,0 +1,11 @@
+replace normal functions with arrow functions
+use of useCallback and useMemo -> done
+combining useRefs/useStates into single if possible
+university ui get rendered when whole data is loaded
+work on responsiveness
+
+
+remove doubly functions in useCallback
+remove useRefs
+use prop types
+use default prop

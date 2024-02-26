@@ -1,0 +1,26 @@
+.loginForm{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 500px;
+    align-items: center;
+    margin: auto;
+    margin-top: 80px; 
+    padding: 40px;  
+    background-color: rgb(255,255,255);
+    box-shadow: -5px 5px 4px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width:800px) and (min-width:614px){
+    .loginForm{
+        width:350px;
+        margin-top: 70px;
+    }
+}
+
+@media (max-width:614px) {
+    .loginForm{
+        width:200px;
+        margin-top: 40px;
+    }
+}

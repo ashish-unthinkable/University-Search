@@ -1,0 +1,249 @@
+{
+  "user": [
+    {
+      "id": "ashish",
+      "name": "ashish",
+      "email": "ashish@gmail.com",
+      "password": "@@",
+      "login": false,
+      "university": [
+        {
+          "name": "Delhi College of Engineering (DCE)",
+          "country": "India",
+          "isBookmarked": true
+        }
+      ]
+    },
+    {
+      "id": "demo",
+      "name": "deo",
+      "email": "demo@gmail.com",
+      "password": "@@",
+      "login": false,
+      "university": [
+        {
+          "name": "University of Delhi",
+          "isBookmarked": true
+        },
+        {
+          "name": "Indraprastha Institute of Information Technology, Delhi",
+          "isBookmarked": true
+        },
+        {
+          "name": "Delhi College of Engineering (DCE)",
+          "isBookmarked": true
+        },
+        {
+          "name": "Delhi College of Engineering (DCE)",
+          "isBookmarked": true
+        },
+        {
+          "name": "Indraprastha Institute of Information Technology, Delhi",
+          "isBookmarked": true
+        },
+        {
+          "name": "University of Delhi",
+          "isBookmarked": true
+        },
+        {
+          "name": "Delhi College of Engineering (DCE)",
+          "isBookmarked": true
+        },
+        {
+          "name": "Delhi College of Engineering (DCE)",
+          "isBookmarked": true
+        },
+        {
+          "name": "Mohamed bin Zayed University of Artificial Intelligence (MBZUAI)",
+          "isBookmarked": true
+        },
+        {
+          "name": "Mohamed bin Zayed University of Artificial Intelligence (MBZUAI)",
+          "isBookmarked": true
+        }
+      ]
+    },
+    {
+      "id": "testSmith",
+      "name": "Test Smith",
+      "email": "testSmith@gmail.com",
+      "password": "##$$",
+      "login": false,
+      "university": [
+        {
+          "name": "Delhi College of Engineering (DCE)",
+          "country": "India",
+          "isBookmarked": true
+        },
+        {
+          "name": "Indraprastha Institute of Information Technology, Delhi",
+          "country": "India",
+          "isBookmarked": true
+        },
+        {
+          "name": "Indian Institute of Technology, Delhi",
+          "isBookmarked": true
+        },
+        {
+          "name": "University of Delhi",
+          "country": "India",
+          "isBookmarked": true
+        },
+        {
+          "name": "National Institute of Technology Delhi",
+          "country": "India",
+          "isBookmarked": true
+        }
+      ]
+    },
+    {
+      "id": "h",
+      "name": "hello",
+      "email": "h@gmail.com",
+      "password": "@",
+      "login": false,
+      "university": []
+    },
+    {
+      "id": "demodemo",
+      "name": "Ashish",
+      "email": "demodemo@gmail.com",
+      "password": "@@",
+      "login": false,
+      "university": []
+    },
+    {
+      "id": "aksingh",
+      "name": "",
+      "email": "aksingh@gmail.com",
+      "password": "@@",
+      "login": false,
+      "university": []
+    },
+    {
+      "id": "aditya1",
+      "name": "Aditya ",
+      "email": "aditya1@gmail.com",
+      "password": "@@",
+      "login": false,
+      "university": [
+        {
+          "name": "Indian Institute of Technology, Bombay",
+          "isBookmarked": true
+        },
+        {
+          "name": "Delhi College of Engineering (DCE)",
+          "isBookmarked": true
+        }
+      ]
+    },
+    {
+      "id": "user",
+      "name": "New User",
+      "email": "user@gmail.com",
+      "password": "@@",
+      "login": false,
+      "university": [
+        {
+          "name": "Delhi College of Engineering (DCE)",
+          "isBookmarked": true
+        }
+      ]
+    },
+    {
+      "id": "ak",
+      "name": "AK",
+      "email": "ak@gmail.com",
+      "password": "@@",
+      "login": false,
+      "university": []
+    },
+    {
+      "id": "123",
+      "name": "ASHISH",
+      "email": "123@gmail.com",
+      "password": "@@",
+      "login": false,
+      "university": []
+    },
+    {
+      "id": "ashish1",
+      "name": "AK",
+      "email": "ashish1@gmail.com",
+      "password": "@@",
+      "login": true,
+      "university": [
+        {
+          "name": "Delhi College of Engineering (DCE)",
+          "country": "India",
+          "isBookmarked": true
+        },
+        {
+          "name": "Indian Institute of Technology, Delhi",
+          "country": "India",
+          "isBookmarked": true
+        },
+        {
+          "name": "University of Delhi",
+          "country": "India",
+          "isBookmarked": true
+        },
+        {
+          "name": "Indraprastha Institute of Information Technology, Delhi",
+          "country": "India",
+          "isBookmarked": true
+        }
+      ]
+    },
+    {
+      "id": "demodemo123",
+      "name": "DemoDemo",
+      "email": "demodemo123@gmail.com",
+      "password": "@@",
+      "university": [
+        {
+          "name": "Indian Institute of Technology, Bombay",
+          "country": "India",
+          "isBookmarked": true
+        }
+      ]
+    },
+    {
+      "id": "abc",
+      "name": "abc",
+      "email": "abc@gmail.com",
+      "password": "@@",
+      "university": [
+        {
+          "name": "Indian Institute of Technology, Bombay",
+          "country": "India",
+          "isBookmarked": true
+        }
+      ]
+    },
+    {
+      "id": "ikik",
+      "name": "Ishan",
+      "email": "ikik@gmail.com",
+      "password": "@@",
+      "university": [
+        {
+          "name": "Indian Institute of Technology, Bombay",
+          "country": "India",
+          "isBookmarked": true
+        },
+        {
+          "name": "Lovely Professional University",
+          "country": "India",
+          "isBookmarked": true
+        }
+      ]
+    },
+    {
+      "id": "ashish",
+      "email": "ashish@gmail.com",
+      "password": "@",
+      "university": []
+    }
+  ]
+}
