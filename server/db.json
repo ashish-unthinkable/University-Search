@@ -11,6 +11,16 @@
           "name": "Delhi College of Engineering (DCE)",
           "country": "India",
           "isBookmarked": true
+        },
+        {
+          "name": "Indian Institute of Technology, Delhi",
+          "country": "India",
+          "isBookmarked": true
+        },
+        {
+          "name": "Indraprastha Institute of Information Technology, Delhi",
+          "country": "India",
+          "isBookmarked": true
         }
       ]
     },

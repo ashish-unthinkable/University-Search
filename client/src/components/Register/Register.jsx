@@ -54,8 +54,6 @@ function Register() {
       const response = await GET(serverUrl + `?email=${email}`);
       const user = response?.data?.[0];
       if(user){
-        // setWarning(true);
-        // setWarningText("User already exists, Go to Login");
         setWarning({isWarning: true, warningText:"User already exists!"})
         return; 
       }

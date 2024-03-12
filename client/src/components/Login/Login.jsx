@@ -1,10 +1,10 @@
-import React, { useState, useCallback } from "react";
+import React, { useState, useCallback, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 
 import { GET } from "../../API";
 import { serverUrl } from "../../Constant";
-import { updateUser } from "../../feature/userFeature.js";
+import { getUser, updateUser } from "../../feature/userFeature.js";
 import Input from "../Input.jsx/Input";
 import Button from "../Button/Button";
 import "./login.css";
@@ -12,13 +12,21 @@ import "./login.css";
 
 function Login() {
   // const { updateUser } = useAuth();
-  const dispatch = useDispatch();
   const [credentials, setCredentials] = useState({});
-
+  
   // initial warning -> warning on input when the page mounts
   const [initialWarning, setInitialWarning] = useState(false);
   const [warning, setWarning] = useState({isWarning: false, warningText:""});
+  const dispatch = useDispatch();
   const navigate = useNavigate();
+
+  const user = useSelector(getUser);
+
+  useEffect(()=>{
+    if(user){
+      return navigate('/');
+    }
+  },[user])
 
   const handleEmailChange = useCallback((event) => {
     const emailValue = event.target.value;

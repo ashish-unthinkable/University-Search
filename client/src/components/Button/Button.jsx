@@ -6,7 +6,7 @@ import "./button.css";
 const Button = ({ label, onClick, arrow, warning }) => {
   return (
     <>
-      {warning?.isWarning && <div className="buttonWarning">{warning?.warningText}</div>}
+      {warning?.isWarning && <div className="buttonWarning">{warning.warningText}</div>}
       <button onClick={onClick}>
         {label} {arrow && <span className="loginArrow">&rarr;</span>}
       </button>

@@ -139,7 +139,7 @@ const Profile = () => {
         console.error("Error fetching user university data:", error.message);
       }
     },
-    [universityUrl, countryUrl]
+    [universityUrl, countryUrl, GET]
   );
 
 
@@ -147,8 +147,7 @@ const Profile = () => {
     <div className="profileContainer">
       <div className="favorites">
         <div className="title">My favorites</div>
-        {bookmarkedUniversity &&
-          bookmarkedUniversity.map((university, index) => {
+        {bookmarkedUniversity?.map((university, index) => {
             return (
               <UniversityCard
                 key={index.toString() + university.name}

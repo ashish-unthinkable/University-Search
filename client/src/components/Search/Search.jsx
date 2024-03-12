@@ -114,8 +114,7 @@ function Search() {
           </div>
         ) : null}
 
-        {suggestionsArray?.length > 0
-          ? suggestionsArray.map((university, index) => {
+        {suggestionsArray?.map((university, index) => {
               return (
                 <div
                   className="suggestionsArray"
@@ -133,8 +132,7 @@ function Search() {
                   </div>
                 </div>
               );
-            })
-          : null}
+            })}
         {university && country && (
           <div className="universityData">
             <UniversityDetail university={university} country={country} />
